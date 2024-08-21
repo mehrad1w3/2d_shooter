@@ -6,7 +6,7 @@ extends CharacterBody2D
 const gravity: float = 1000.0
 var walk_speed: float = 200.0
 const max_fall: float = 400
-const run_speed_multiplier = 1.5
+const run_speed_multiplier = 1.6
 
 enum player_state {IDEL, WALK, HURT, RUN, AIM_STILL, AIM_WALK}
 
