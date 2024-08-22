@@ -314,9 +314,9 @@ script = ExtResource("1_icd6t")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_o6iex")
-animation = &"shot"
+animation = &"walk"
 autoplay = "idel"
-frame_progress = 0.18378
+frame_progress = 0.530535
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-3, 30.75)
