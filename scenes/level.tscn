@@ -181,9 +181,3 @@ position = Vector2(78, -199)
 [node name="playercam" parent="." instance=ExtResource("2_375n5")]
 position = Vector2(318, -152)
 zoom = Vector2(2, 2)
-
-[node name="Control" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
