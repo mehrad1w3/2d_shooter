@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://bmuptrme4ecbq"]
+
+[ext_resource type="Texture2D" uid="uid://dts7b5dtn1oop" path="res://assetes/Soldier_1/beams2.png" id="1_g2f33"]
+[ext_resource type="Script" path="res://scripts/bullet.gd" id="2_rrtsd"]
+
+[node name="bullet" type="Sprite2D"]
+rotation = 1.5708
+texture = ExtResource("1_g2f33")
+script = ExtResource("2_rrtsd")

@@ -1,5 +1,5 @@
 extends CharacterBody2D
-
+@onready var bullet = preload("res://scenes/bullet.tscn")
 @onready var animation_sprite_2d = $AnimatedSprite2D
 @onready var debug_Label = $debug_Label
 
@@ -21,6 +21,8 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 	calculate_state()
 	update_debug_label()
+
+
 
 func update_debug_label() -> void:
 	debug_Label.text = "floor:%s\n%s\n%.0f" % [
@@ -50,7 +52,7 @@ func get_input() -> void:
 		is_aiming = true
 		is_firing = Input.is_action_pressed("shoot")
 		if is_firing:
-			shoot() # Call shoot() when is_firing is true
+			shootanimation() # Call shoot() when is_firing is true
 	else:
 		is_aiming = false
 		is_firing = false
@@ -121,6 +123,8 @@ func set_state(new_state: player_state) -> void:
 			animation_sprite_2d.play("aim")
 		player_state.SHOT:
 			animation_sprite_2d.play("shot")
-func shoot() -> void:
-	set_state(player_state.SHOT)  # Set the "SHOT" state to trigger the animation
-	   # ... (rest of your shoot logic)
+func shootanimation() -> void:
+	set_state(player_state.SHOT) 
+	var bullet_instance = bullet.instantiate()
+	add_child(bullet_instance)
+	
