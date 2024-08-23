@@ -2,6 +2,7 @@ extends CharacterBody2D
 @onready var bullet = preload("res://scenes/bullet.tscn")
 @onready var animation_sprite_2d = $AnimatedSprite2D
 @onready var debug_Label = $debug_Label
+@onready var pivotpoint: Marker2D = $AnimatedSprite2D/pivotpoint
 
 const gravity: float = 1000.0
 var walk_speed: float = 200.0
@@ -126,5 +127,5 @@ func set_state(new_state: player_state) -> void:
 func shootanimation() -> void:
 	set_state(player_state.SHOT) 
 	var bullet_instance = bullet.instantiate()
-	add_child(bullet_instance)
+	pivotpoint.add_child(bullet_instance)
 	

@@ -1,10 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://dcfvpwh72nffq"]
+[gd_scene load_steps=7 format=3 uid="uid://dcfvpwh72nffq"]
 
 [ext_resource type="Texture2D" uid="uid://nin2q0mwc3iw" path="res://assetes/Soldier_1/Terrain (16x16).png" id="1_4d2jw"]
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_4220h"]
 [ext_resource type="PackedScene" uid="uid://cijkywknxxl4t" path="res://scenes/playercam.tscn" id="2_375n5"]
 [ext_resource type="PackedScene" uid="uid://bjf4aeq18thsx" path="res://scenes/player.tscn" id="3_tenkn"]
-[ext_resource type="PackedScene" uid="uid://bmuptrme4ecbq" path="res://scenes/bullet.tscn" id="4_27x6a"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6h3fa"]
 texture = ExtResource("1_4d2jw")
@@ -178,8 +177,6 @@ layer_0/tile_data = PackedInt32Array(-65535, 786432, 4, -65534, 851968, 4, -6553
 
 [node name="player" parent="." instance=ExtResource("3_tenkn")]
 position = Vector2(78, -199)
-
-[node name="bullet" parent="player" instance=ExtResource("4_27x6a")]
 
 [node name="playercam" parent="." instance=ExtResource("2_375n5")]
 position = Vector2(318, -152)
