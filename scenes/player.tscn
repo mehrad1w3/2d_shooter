@@ -277,7 +277,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"shot",
-"speed": 20.0
+"speed": 30.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -314,12 +314,12 @@ script = ExtResource("1_icd6t")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_o6iex")
-animation = &"aim_walk"
+animation = &"shot"
 autoplay = "idel"
-frame_progress = 0.790313
+frame_progress = 0.952893
 
 [node name="pivotpoint" type="Marker2D" parent="AnimatedSprite2D"]
-position = Vector2(32.6493, 14.4873)
+position = Vector2(34.2743, 14.5185)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-3, 30.75)
