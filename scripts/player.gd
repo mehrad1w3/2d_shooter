@@ -52,7 +52,7 @@ func get_input() -> void:
 		is_aiming = true
 		is_firing = Input.is_action_pressed("shoot")
 		if is_firing:
-			shootanimation() # Call shoot() when is_firing is true
+			shootANDanimation() # Call shoot() when is_firing is true
 	else:
 		is_aiming = false
 		is_firing = false
@@ -123,7 +123,7 @@ func set_state(new_state: player_state) -> void:
 			animation_sprite_2d.play("aim")
 		player_state.SHOT:
 			animation_sprite_2d.play("shot")
-func shootanimation() -> void:
+func shootANDanimation() -> void:
 	set_state(player_state.SHOT) 
 	var bullet_instance = bullet.instantiate()
 	pivotpoint.add_child(bullet_instance)
